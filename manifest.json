@@ -1,0 +1,22 @@
+{
+    "name": "__MSG_name__",
+    "version": "15.5.18.1",
+    "author": "Plugtopus Agency",
+    "manifest_version": 2,
+    "description": "__MSG_desc__",
+    "homepage_url": "https://plugtopus.agency",
+    "browser_action": {
+        "default_icon": {
+            "128": "icon/logo.png"
+        },
+        "default_popup": "html/popup.html",
+    },
+    "icons": {
+        "128": "icon/logo.png"
+    },
+    "web_accessible_resources": [
+        "icon/*",
+        "fonts/*",
+        "js/*"
+    ]
+}

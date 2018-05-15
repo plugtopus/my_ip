@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../fonts/flags.css">
+    <style type="text/css">
+        body {
+            width: 260px;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .container {
+            padding: 1px 10px;
+            padding-bottom: 0;
+        }
+
+        .c-blue {
+            color: #0069c5;
+        }
+
+        .container>img {
+            width: 100%;
+            margin: 0px -23px;
+            padding: 5px 25px;
+            padding-top: 20px;
+            margin-top: -20px;
+            background-color: #00b0bd;
+        }
+
+        p {
+            font-size: 19px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        label {
+            margin-top: 20px;
+            display: block;
+        }
+
+        .message {
+            text-align: center;
+            position: relative;
+            margin: 0 -20px;
+            margin-top: 20px;
+            padding: 15px 20px;
+            background-color: #e6e6e6;
+        }
+
+        .message .button {
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .message div a {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            font-weight: bold;
+            border: 0;
+            background-color: #0071d6;
+            color: #efefef;
+            font-size: 13px;
+            margin-top: 10px;
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .message a:hover {
+            cursor: pointer;
+            background-color: #00a1ef;
+        }
+
+        .message img {
+            height: 25px;
+            margin-top: -5px;
+            margin-left: 0px;
+            float: left;
+        }
+
+        .message>a {
+            top: 0;
+            right: 10px;
+            position: absolute;
+            font-size: 12px;
+        }
+
+
+        .overlay {
+            background-color: #727aa8;
+            ;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+            animation: sk-scaleout 1.0s infinite ease-in-out;
+            background-color: #272727;
+            border-radius: 100%;
+            left: calc( 50% - 20px);
+            position: absolute;
+            top: calc( 50% - 20px);
+        }
+
+        @-webkit-keyframes sk-scaleout {
+            0% {
+                -webkit-transform: scale(0)
+            }
+            100% {
+                -webkit-transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sk-scaleout {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            100% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Ваш IP Адрес:</label>
+        <p class="c-blue" id="ip">000.00.000.000</p>
+        <label>Страна:</label>
+        <p>
+            <span class="flag"></span>
+            <span id="location">...</span>
+        </p>
+        <br>
+    </div>
+    <div class="overlay">
+        <div class="spinner"></div>
+    </div>
+</body>
+
+</html>
